@@ -1,0 +1,56 @@
+.admin_page {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(228, 120, 156);
+  height: 93vh;
+  width: 100%;
+}
+
+.faculty_login {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50%;
+  padding-top: 1.5rem;
+  padding-right: 5vw;
+  padding-left: 10vw;
+  background-color: white;
+  margin: 3px;
+  margin-bottom: 0px;
+  /* border-bottom: thistle 1px solid; */
+}
+
+.admin_description {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.admin_login {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1.5rem;
+  justify-content: space-between;
+  height: 50%;
+  padding-right: 5vw;
+  background-color: rgb(223, 223, 223);
+  padding-left: 10vw;
+  margin: 3px;
+}
+
+@media only screen and (max-width: 990px) {
+  .admin_login,
+  .faculty_login {
+    flex-direction: column;
+    padding-bottom: 8px;
+    padding-left: 8vw;
+  }
+
+  .admin_description{
+      width: 100%;
+  }
+
+  .admin_page{
+      height: 100%;
+  }
+}

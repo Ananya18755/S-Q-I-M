@@ -1,0 +1,27 @@
+.login_form{
+    width: 100%;
+    
+    /* border: teal solid 2px !important;
+    border-radius: 2px !important; */
+
+}
+
+.login{
+    padding: 20px;
+    border: rgb(255, 70, 116) solid 2px;
+    height: fit-content;
+    border-radius: .5cm;
+    width: 40%;
+}
+
+.login_button{
+    width: 60%;
+    margin-top: 10px !important;
+}
+
+@media only screen and (max-width:990px){
+
+    .login{
+        width: 85%;
+    }
+}
