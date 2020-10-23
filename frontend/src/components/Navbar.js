@@ -14,7 +14,7 @@ export default function Navbar() {
     <div className="topnav">
       <div>
         <NavLink className="app_title" to="/">
-          CHBSDCHKI
+          SQIMS
         </NavLink>
         <ListRoundedIcon
           className="icon"
