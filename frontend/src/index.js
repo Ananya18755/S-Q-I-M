@@ -10,7 +10,6 @@ import Parent from "./pages/Parent";
 import Student from "./pages/Student";
 import Visitor from "./pages/Visitor";
 import About from "./pages/About";
-import Navbar from "./components/Navbar";
 import Root from "./pages/Root";
 
 ReactDOM.render(
