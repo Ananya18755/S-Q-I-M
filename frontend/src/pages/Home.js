@@ -24,7 +24,7 @@ export default function Home() {
           </p>
         </div>
         {/* <h1> some image </h1> */}
-        <img src={bot} content="width=device-width, initial-scale=1"  alt='image' />
+        <img src={bot} content="width=device-width, initial-scale=1"  alt='bot' />
       </div>
     </div>
   );
