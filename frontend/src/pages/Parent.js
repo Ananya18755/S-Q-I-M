@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/parent.css";
 import parent_img from "../parent-query.png";
 import ParentQuery from "../components/ParentQuery";
 
 export default function Parent() {
+  const [ans, setAns] = useState("");
+
+  const handleSetQuery = (val) => {
+    setAns(val);
+  };
+
+  console.log(ans);
+
   return (
     <div className="parent_page">
       <div className="parent_login">
@@ -19,7 +27,7 @@ export default function Parent() {
           <img src={parent_img} alt="parent_query" />
         </div>
         {/* <h1> query </h1> */}
-        <ParentQuery/>
+        <ParentQuery onQuery={handleSetQuery} />
       </div>
       <div className="parent_sub">
         <h1> sub section</h1>
