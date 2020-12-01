@@ -1,9 +1,11 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "../styles/student.css";
 import Login from "../components/Login";
 import stu_img from "../student-query.gif";
 
 export default function Student() {
+
+
   return (
     <div className="student_page">
       <div className="student_login">

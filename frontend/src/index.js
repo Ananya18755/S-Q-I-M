@@ -1,30 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Admin from "./pages/Admin";
-import Parent from "./pages/Parent";
-import Student from "./pages/Student";
-import Visitor from "./pages/Visitor";
-import About from "./pages/About";
-import Root from "./pages/Root";
+import { Context } from "./Context";
+import { BrowserRouter as Router } from "react-router-dom";
+
+// import { Context } from "./Context";
+
+const AppWrapper = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [who, setWho] = useState("");
+
+  return (
+    <Context.Provider value={[loggedIn, setLoggedIn, who, setWho]}>
+      <Router>
+        <App />
+      </Router>
+    </Context.Provider>
+  );
+};
 
 ReactDOM.render(
-  <>
-    <Router>
-      <App />
-      <Route exact path="/home" component={Home}></Route>
-      <Route exact path="/about" component={About}></Route>
-      <Route exact path="/parent" component={Parent}></Route>
-      <Route exact path="/student" component={Student}></Route>
-      <Route exact path="/visitor" component={Visitor}></Route>
-      <Route exact path="/admin" component={Admin}></Route>
-      <Route exact path="/" component={Root}></Route>
-    </Router>
-  </>,
+  <React.StrictMode>
+    <AppWrapper />
+  </React.StrictMode>,
   document.getElementById("root")
 );
 
